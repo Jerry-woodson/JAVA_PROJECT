@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- 数据源配置 -->
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <!-- 使用 Derby 嵌入式驱动程序 -->
+                <property name="driver" value="org.apache.derby.jdbc.EmbeddedDriver"/>
+                <!-- Derby 数据库文件存储的本地路径 -->
+                <property name="url" value="jdbc:derby:F:\db-derby-10.16.1.1-bin\derby;create=true"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <!-- 映射文件路径 -->
+    <mappers>
+        <mapper resource="mapper/StudentsMapper.xml" />
+    </mappers>
+</configuration>

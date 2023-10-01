@@ -1,0 +1,6 @@
+<!--students.dtd-->
+<!ELEMENT students (student+)>
+<!ELEMENT student (name, age, gender)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT gender (#PCDATA)>
